@@ -18,7 +18,7 @@ Router1 connects to Switch1 and Switch2. Switch1 has PC0 and PC1 connected. Swit
 ### 1. Initial Topology
 Placed one router and two switches, with two PCs connected to each switch. No cabling to the router yet.
 
-![Initial topology](images/Screenshot_2026-09-06_235519.png)
+![Initial topology](images/Screenshot%202026-09-06%20235519.png)
 
 ### 2. Router Configuration - Gi0/0
 Cabled the router to both switches. Checked interface status with `show ip int b`, then configured GigabitEthernet0/0:
@@ -30,7 +30,7 @@ Router(config-if)#no sh
 
 Confirmed the interface came up via %LINK-5-CHANGED and %LINEPROTO-5-UPDOWN messages.
 
-![Router Gi0/0 config](images/Screenshot_2026-09-07_162825.png)
+![Router Gi0/0 config](images/Screenshot%202026-09-07%20162825.png)
 
 ### 3. Router Configuration - Gi0/1
 Configured the second interface for the Switch2 subnet:
@@ -40,7 +40,7 @@ Router(config-if)#ip add 192.168.2.1 255.255.255.0
 Router(config-if)#no sh
 
 
-![Router Gi0/1 config](images/Screenshot_2026-09-07_163003.png)
+![Router Gi0/1 config](images/Screenshot%202026-09-07%20163003.png)
 
 ### 4. PC IP Configuration
 Statically assigned an IP to a PC on the 192.168.1.0/24 subnet:
@@ -49,12 +49,12 @@ Statically assigned an IP to a PC on the 192.168.1.0/24 subnet:
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.1.1
 
-![PC IP configuration](images/Screenshot_2026-09-07_165927.png)
+![PC IP configuration](images/Screenshot%202026-09-07%20165927.png)
 
 ### 5. Connectivity Test
 Pinged 192.168.1.2 from a PC's command prompt to validate connectivity on the same subnet. Initial packet loss cleared up as ARP resolved, ending in a clean 0% loss with sub-millisecond round trip times.
 
-![Ping test](images/Screenshot_2026-09-07_170049.png)
+![Ping test](images/Screenshot%202026-09-07%20170049.png)
 
 ## Notes
 
